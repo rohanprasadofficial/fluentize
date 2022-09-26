@@ -1,0 +1,126 @@
+body {
+    font: 12px sans-serif;
+    text-align: center;
+    margin: 20px;
+    background-color: #F4F1E8;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+button {
+    border-radius: 5px;
+    background: white;
+    color: black;
+    border: none;
+    padding: 8px 15px;
+    margin: 0 5px;
+    box-shadow: inset 0 0 0 1px black;
+    outline: none;
+}
+
+#create {
+    box-shadow: none;
+    background: #18a0fb;
+    color: white;
+}
+
+input {
+    border: none;
+    outline: none;
+    padding: 8px;
+}
+
+input:hover {
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+button:focus {
+    box-shadow: inset 0 0 0 2px #18a0fb;
+}
+
+#create:focus {
+    box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.3);
+}
+
+input:focus {
+    box-shadow: inset 0 0 0 2px #18a0fb;
+}
+
+
+/* Main Card */
+
+#graphy {
+    background-image: url('../assets/graphy.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 200px;
+    width: 200px;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.greetings {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    margin: 0%;
+    color: #0A0909;
+    margin: 0%;
+}
+
+.textContainer {
+    align-items: flex-start;
+    width: 50%;
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.subline {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    margin: 0%;
+    margin-top: 5px;
+    color: #0A0909;
+    color: #929292;
+}
+
+
+/* Timer Card */
+
+.timeCard {
+    display: flex;
+    background-color: #FFFFFF;
+    width: 70%;
+    height: auto;
+    border-radius: 16px;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+
+#itemIcon {
+    background-image: url('../assets/timelogo.svg');
+    height: 50px;
+    width: 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#arrowIcon {
+    background-image: url('../assets/rightarrow.svg');
+    height: 50px;
+    width: 50px;
+    background-repeat: no-repeat;
+    align-items: center;
+    background-position: center;
+}
