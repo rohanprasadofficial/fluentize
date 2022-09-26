@@ -1,26 +1,13 @@
-figma.showUI(__html__,{height:600,width:500});
+import {SwitchProps} from './utils/types';
+import {Switch} from './utils/componentStruct';
+figma.showUI(__html__, {height: 600, width: 500});
 
 figma.ui.onmessage = (msg) => {
-    if (msg.type === 'create-rectangles') {
-        const nodes = [];
-
-        for (let i = 0; i < msg.count; i++) {
-            const rect = figma.createRectangle();
-            rect.x = i * 150;
-            rect.fills = [{type: 'SOLID', color: {r: 1, g: 0.5, b: 0}}];
-            figma.currentPage.appendChild(rect);
-            nodes.push(rect);
+    if (msg.type === 'create-component') {
+        if (figma.currentPage.selection[0].type == 'INSTANCE') {
+            const state = (figma.currentPage.selection[0] as any).componentProperties[SwitchProps.State];
+            const toggled = (figma.currentPage.selection[0] as any).componentProperties[SwitchProps.Toggled];
+            console.log(Switch(state.value, toggled.value));
         }
-
-        figma.currentPage.selection = nodes;
-        figma.viewport.scrollAndZoomIntoView(nodes);
-
-        // This is how figma responds back to the ui
-        figma.ui.postMessage({
-            type: 'create-rectangles',
-            message: `Created ${msg.count} Rectangles`,
-        });
     }
-
-    figma.closePlugin();
 };

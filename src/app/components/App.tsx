@@ -4,31 +4,20 @@ import '../styles/ui.css';
 declare function require(path: string): any;
 
 const App = ({}) => {
-    // const textbox = React.useRef<HTMLInputElement>(undefined);
+    React.useEffect(() => {
+        parent.postMessage({pluginMessage: {type: 'create-component'}}, '*');
+    });
 
-    // const countRef = React.useCallback((element: HTMLInputElement) => {
-    //     if (element) element.value = '5';
-    //     textbox.current = element;
-    // }, []);
-
-    // const onCreate = () => {
-    //     const count = parseInt(textbox.current.value, 10);
-    //     parent.postMessage({pluginMessage: {type: 'create-rectangles', count}}, '*');
-    // };
-
-    // const onCancel = () => {
-    //     parent.postMessage({pluginMessage: {type: 'cancel'}}, '*');
-    // };
+    const onCreate = () => {
+        console.log('Create');
+    };
 
     React.useEffect(() => {
         // This is how we read messages sent from the plugin controller
         console.log(window.location.pathname);
-
     }, []);
-    return (
-      <div>Hello From Fluentize</div>
-    );
-};
 
+    return <div onClick={onCreate}>Hello From Fluentize</div>;
+};
 
 export default App;
