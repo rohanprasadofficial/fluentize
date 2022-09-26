@@ -1,5 +1,5 @@
 
-## Figma Plugin - Fluent Code Generator
+## Fluentize - Fluent Code Generator
 
 This will generate fluent code for selected figma design component files. 
 

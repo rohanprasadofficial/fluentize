@@ -1,6 +1,6 @@
 {
-	"name": "fluent-code-generator",
-	"version": "1.0.0",
+	"name": "fluentize",
+	"version": "0.0.1",
 	"description": "Figma plugin to generate fluent code",
 	"license": "ISC",
 	"scripts": {

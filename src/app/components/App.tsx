@@ -26,7 +26,7 @@ const App = ({}) => {
 
     }, []);
     return (
-      <div>Hello From Fluent</div>
+      <div>Hello From Fluentize</div>
     );
 };
 
